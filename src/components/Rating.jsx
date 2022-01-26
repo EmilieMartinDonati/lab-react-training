@@ -1,20 +1,35 @@
 import React from "react";
 
+// ✩
+// ⭑
+
+
+
 const Rating = (props) => {
 
+let starsArray = [];
+let emptyStarsArray = [];
+
 function starGenerator (number) {
+    Math.floor(number);
+    console.log(number);
     for (let i = 0; i <= number.length ; i ++) {
-       return <img src="../assets/images/six-pointed-star-ge47d44d91_640.png" alt="" />
-    }
+       starsArray.unshift("⭑");
+    };
+const rest = Math.floor(5 - number);
+console.log(rest);
+for (let i = 0; i < rest ; i ++) {
+    emptyStarsArray.unshift("✩");
+ };
 }
 
 // oh, no, it's actually with className who have background images.
 
-const output = starGenerator(props.children)
+starGenerator(props.children);
 
 
    return (
-       <div>{output}
+       <div><span>{starsArray}</span><span>{emptyStarsArray}</span>
        </div>
    )
 }
