@@ -13,6 +13,8 @@ import ClickablePicture from './components/ClickablePicture';
 import Carousel from './components/Carousel';
 import Img from "./assets/images/maxence.png";
 import ImgClicked from './assets/images/maxence-glasses.png';
+import NumbersTable from './components/NumbersTable';
+import Facebook from './components/Facebook';
 
 function App() {
   const john = {
@@ -175,6 +177,12 @@ function App() {
           'https://randomuser.me/api/portraits/women/2.jpg',
           'https://randomuser.me/api/portraits/men/2.jpg'
         ]} />
+        <hr></hr>
+        <h1>ITERATION 12</h1>
+        <NumbersTable limit={12} />
+        <hr></hr>
+        <h1>ITERATION 13 & 14</h1>
+        <Facebook />
       </header>
     </div>
       );
